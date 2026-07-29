@@ -19,3 +19,6 @@ spec:
           image: louiswu2011/attendance-management:202607291526
           ports:
             - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: spring-secret
