@@ -17,4 +17,9 @@ jobs:
         with:
           entrypoint: '/kubeconform'
           args: |
-            -summary -schema-location default -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json' deploy/
+            -summary
+            -schema-location
+            default
+            -schema-location
+            https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json
+            deploy/
