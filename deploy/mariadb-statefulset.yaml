@@ -23,6 +23,9 @@ spec:
           envFrom:
             - secretRef:
                 name: mariadb-secret
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: mariadb-pvc
   volumeClaimTemplates:
     - metadata:
         name: mariadb-pvc
