@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: spring
+          image: louiswu2011/attendance-management:202607291526

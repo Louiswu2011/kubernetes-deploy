@@ -9,6 +9,7 @@ configMapGenerator:
     literals:
       - DB_URL=jdbc:mariadb://mariadb-statefulset-0.mariadb-service.attendance-dev.svc.cluster.local:3306/attendance?useUnicode=true&characterEncoding=utf8
 patches:
+  - path: spring-image-patch.yaml
   - target:
       kind: SealedSecret
     patch: |-
