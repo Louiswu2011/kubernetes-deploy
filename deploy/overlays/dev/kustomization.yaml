@@ -10,3 +10,9 @@ patches:
       - op: replace
         path: /spec/template/metadata/namespace
         value: attendance-dev
+  - target:
+      kind: Ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/http/paths/0/path
+        value: "/dev"
