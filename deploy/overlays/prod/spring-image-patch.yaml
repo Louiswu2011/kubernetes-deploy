@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
         - name: spring
-          image: louiswu2011/attendance-management:202607291526
+          image: louiswu2011/attendance-management:20260730133727
