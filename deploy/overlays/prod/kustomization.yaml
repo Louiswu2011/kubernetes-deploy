@@ -3,6 +3,11 @@ kind: Kustomization
 resources:
   - ../../base
 namespace: attendance-prod
+configMapGenerator:
+  - name: db-env
+    behavior: replace
+    literals:
+      - DB_URL=jdbc:mariadb://mariadb-statefulset-0.mariadb-service.attendance-prod.svc.cluster.local:3306/attendance?useUnicode=true&characterEncoding=utf8
 patches:
   - target:
       kind: SealedSecret

@@ -22,3 +22,5 @@ spec:
           envFrom:
             - secretRef:
                 name: spring-secret
+            - configMapRef:
+                name: db-env

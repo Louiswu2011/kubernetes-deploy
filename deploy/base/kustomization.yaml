@@ -1,5 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+configMapGenerator:
+  - name: db-env
+    literals:
+      - DB_URL=localhost
+    options:
+      disableNameSuffixHash: true
 resources:
   - mariadb-service.yaml
   - mariadb-statefulset.yaml
