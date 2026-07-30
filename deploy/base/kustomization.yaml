@@ -8,4 +8,3 @@ resources:
   - spring-ingress.yaml
   - spring-deployment.yaml
   - sealed-spring-secret.yaml
-  - pv-mariadb.yaml
