@@ -10,9 +10,3 @@ patches:
       - op: replace
         path: /spec/template/metadata/namespace
         value: attendance-dev
-  - target:
-      kind: PersistentVolume
-    patch: |-
-      - op: replace
-        path: /spec/hostPath/path
-        value: /opt/k8s/dev/mariadb
